@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wa-clone-tutorial-d4330": {
+      "hosting": {
+        "whatsapp-clone": [
+          "wa-clone-tutorial-d4330"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wa-clone-tutorial-d4330"
+  }
+}

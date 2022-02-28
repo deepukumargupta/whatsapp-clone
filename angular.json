@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "whatsapp-clone:build:production",
+            "firebaseProject": "wa-clone-tutorial-d4330",
+            "firebaseHostingSite": "wa-clone-tutorial-d4330"
+          }
         }
       }
     }

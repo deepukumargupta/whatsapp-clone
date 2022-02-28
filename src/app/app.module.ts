@@ -11,6 +11,14 @@ import { ChatRoomComponent } from './components/main-container/chat-area/chat-ro
 import { SidebarComponent } from './components/main-container/sidebar/sidebar.component';
 import { SidebarContentComponent } from './components/main-container/sidebar/sidebar-content/sidebar-content.component';
 import { MaterialModule } from './shared/material.module';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule }   from '@angular/forms';
+import {environment} from '../environments/environment';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +29,19 @@ import { MaterialModule } from './shared/material.module';
     ChatRoomComponent,
     SidebarComponent,
     SidebarContentComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,  
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

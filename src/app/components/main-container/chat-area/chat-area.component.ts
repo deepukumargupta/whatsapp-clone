@@ -12,4 +12,8 @@ export class ChatAreaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  formSubmit() {
+    
+  }
+
 }
